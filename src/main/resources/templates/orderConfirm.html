@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Confirmation</title>
+    <!-- Add any required CSS or meta tags here -->
+</head>
+<body>
+<h1> Your order place sucessfully</h1>    
+    <script>
+        // Push a dummy state to the history stack
+        window.history.pushState({}, '', '/dummyState');
+
+        // Replace the current state with /orderConfirmation
+        window.history.replaceState({}, '', '/orderConfirmation');
+
+        // Add an event listener to handle the back button behavior
+        window.addEventListener('popstate', function(event) {
+            // Redirect to /orders when the back button is clicked
+            window.location.href = "/orders";
+        });
+    </script>
+</body>
+</html>
+
+
